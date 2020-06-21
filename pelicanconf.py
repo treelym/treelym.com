@@ -21,7 +21,9 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (('Home', SITEURL),
-         ('About', SITEURL + '/about'),)
+         ('Posts', SITEURL + '/posts'),
+         ('About', SITEURL + '/about'),
+         ('Contact', SITEURL + '/contact'))
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),

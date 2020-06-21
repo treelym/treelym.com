@@ -7,24 +7,12 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" rel="stylesheet" />
-    <!-- <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main.css" rel="stylesheet" /> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet" />
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" rel="stylesheet" />
     <!-- TODO: Favicon -->
     {% endblock head %}
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="{{ SITEURL }}">{{ SITENAME }}</a>
-      </div>
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          {% for title, link in LINKS %}
-          <a class="navbar-item" href="{{ link }}">
-            {{ title }}
-          </a>
-          {% endfor %}
-        </div>
-      </div>
-    </nav>
+    {% include 'main_navigation.html' %}
   </body>
 </html>
