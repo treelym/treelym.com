@@ -1,3 +1,10 @@
+body {
+  background: rgb(9,4,36);
+  background: linear-gradient(180deg, rgba(9,4,36,1) 0%, rgba(89,54,184,1) 100%);
+}
+.navbar .navbar-end .navbar-item {
+  text-transform: uppercase;
+}
 .navbar .devicons {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }

@@ -1,11 +1,11 @@
-<nav class="navbar is-light">
+<nav class="navbar is-white">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ SITEURL }}">{{ SITENAME }}</a>
   </div>
   <div class="navbar-menu">
     <div class="navbar-end social-icons">
       {% for title, link in LINKS %}
-      <a class="navbar-item" href="{{ link }}">
+      <a class="navbar-item is-size-6 has-text-dark" href="{{ link }}">
         {{ title }}
       </a>
       {% endfor %}
