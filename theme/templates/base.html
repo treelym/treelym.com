@@ -1,18 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {% block head %}
+<head>
+  {% block head %}
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet" />
-    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" rel="stylesheet" />
-    <!-- TODO: Favicon -->
-    {% endblock head %}
-  </head>
-  <body>
-    {% include 'main_navigation.html' %}
-  </body>
+
+    {% include "styles.html" %}
+  {% endblock head %}
+</head>
+<body>
+  <div class="js-off-canvas-container c-off-canvas-container">
+    {% include "header.html" %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include "footer.html" %}
+  </div>
+
+  <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/app.min.js"></script>
+</body>
 </html>
