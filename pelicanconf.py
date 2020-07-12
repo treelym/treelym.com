@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import date
 
 AUTHOR = 'Treelym'
 SITENAME = 'Treelym'
 SITEURL = ''
+
+CURRENT_YEAR = date.today().year
 
 PATH = 'content'
 
