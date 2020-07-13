@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} | {{ article.title|striptags  }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  {% if article.description %}
+    <meta name="description" content="{{ article.description }}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{ tag }}" />
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="c-post-hero" style="background-image: url({{ article.image }})"></div>
+<div class="o-wrapper">
+  <div class="o-grid">
+    <div class="o-grid__col o-grid__col--2-3-m">
+      <article class="c-post">
+        <time class="c-post__date" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+
+        <h2 class="c-post__title">{{ article.title }}</h2>
+
+        <div class="c-content">
+          {{ article.content }}
+        </div>
+
+        {% for tag in article.tags %}
+          <div class="c-tags">
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+          </div>
+        {% endfor %}
+
+        <div class="o-grid">
+          <div class="o-grid__col o-grid__col--full">
+            {% include "share.html" %}
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class='o-grid__col o-grid__col--1-3-m'>
+      {% include "sidebar.html" %}
+    </div>
+</div>
+{% endblock %}

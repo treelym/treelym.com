@@ -9,17 +9,12 @@
           <a href="{{ SITEURL}}/{{ article.url }}" class="js-fadein c-post-card__image" style="background-image: url({{ article.image }})"></a>
       
           <div class="c-post-card__meta">
-            {% for author in article.authors %}
-              <a class="c-post-card__author" href="{{ SITEURL }}/{{ author.url }}" title="{{ author }}">{{ author }} - </a>
-            {% endfor %}
-      
-            <div class="c-post-card__date">
-              <time datetime="{{ article.date.isoformat() }}" title="{{ article.locale_date }}">{{ article.locale_date }}</time>
-            </div>
-      
             <h3 class="c-post-card__title">
               <a href="{{ article.url }}" class="c-post-card__link">{{ article.title }}</a>
             </h3>
+            <div class="c-post-card__date">
+              <time datetime="{{ article.date.isoformat() }}" title="{{ article.locale_date }}">{{ article.locale_date }}</time>
+            </div>
           </div>
         </div>
       </div>

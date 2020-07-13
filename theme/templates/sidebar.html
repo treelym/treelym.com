@@ -1,0 +1,25 @@
+<div class="c-sidebar">
+  {% set recent = articles if not all_articles else all_articles %}
+  {% for article in recent %}
+    {% if loop.index <= 3 %}
+      <div class="c-widget">
+        <h5 class="c-widget__title">Recent Articles</h5>
+
+        <div class="c-post-card-recent">
+          <a href="{{ SITEURL }}/{{ article.url }}" class="js-fadein c-post-card-recent__image" style="background-image: url({{ article.image }})"></a>
+        
+          <div class="c-post-card-recent__meta">
+            <div class="c-post-card-recent__date">
+              <time datetime="{{ article.date.isoformat() }}" title="{{ article.locale_date }}">{{ article.locale_date }}</time>
+            </div>
+        
+            <h3 class="c-post-card-recent__title">
+              <a href="{{ article.url }}" class="c-post-card-recent__link">{{ article.title }}</a>
+            </h3>
+          </div>
+        
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
