@@ -14,7 +14,11 @@
 {% endblock %}
 
 {% block content %}
-<div class="c-post-hero" style="background-image: url({{ article.image }})"></div>
+
+{% if article.image %}
+  <div class="c-post-hero" style="background-image: url({{ article.image }})"></div>
+{% endif %}
+
 <div class="o-wrapper">
   <div class="o-grid">
     <div class="o-grid__col o-grid__col--2-3-m">
