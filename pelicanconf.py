@@ -5,7 +5,7 @@ from datetime import date
 
 AUTHOR = 'Treelym'
 SITENAME = 'Treelym'
-SITEURL = ''
+SITEURL = 'https://treelym.com'
 
 CURRENT_YEAR = date.today().year
 
@@ -24,16 +24,11 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (('Home', SITEURL),
-         ('Posts', SITEURL + '/posts'),
-         ('About', SITEURL + '/about'))
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+         ('About', SITEURL + '/pages/about'))
 
 DEFAULT_PAGINATION = 12
 
 THEME = 'theme'
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
