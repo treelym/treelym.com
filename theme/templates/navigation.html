@@ -1,5 +1,13 @@
-{% for title, link in LINKS %}
+{% for title, link in MENUITEMS %}
   <li class="c-nav__item">
     <a href="{{ link }}" class="c-nav__link">{{ title }}</a>
   </li>
 {% endfor %}
+
+{% if DISPLAY_PAGES_ON_MENU %}
+  {% for page in pages %}
+    <li class="c-nav__item">
+      <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+    </li>
+  {% endfor %}
+{% endif %}
