@@ -23,8 +23,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Home', SITEURL),
-         ('About', SITEURL + '/pages/about'))
+MENUITEMS = (('Home', SITEURL), )
 
 DEFAULT_PAGINATION = 12
 
