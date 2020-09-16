@@ -6,7 +6,7 @@ from datetime import date
 AUTHOR = 'Treelym'
 SITENAME = 'Treelym'
 SITEURL = 'https://treelym.com'
-
+GITHUB_URL = 'https://github.com/treelym'
 CURRENT_YEAR = date.today().year
 
 PATH = 'content'
